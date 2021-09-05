@@ -13,6 +13,12 @@
       crossorigin="anonymous"
     />
 
+    <!-- font awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/c828cc6e39.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- mine -->
     <link rel="stylesheet" href="style.css" />
 
@@ -68,6 +74,71 @@
         </div>
       </div>
     </nav>
+
+    <!--  -->
+    <section class="qna p-2">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <form class="">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Question</label
+                >
+                <input type="text" class="form-control" id="question" />
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Answer</label
+                >
+                <textarea class="form-control" id="answer" rows="3"></textarea>
+              </div>
+              <button class="btn btn-primary">Add</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  -->
+    <section class="qnaTable p-3">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <!-- col 1 -->
+          <div class="col-md-12">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <!-- <th scope="col">#</th> -->
+                  <th scope="col">ID</th>
+                  <th scope="col">Question</th>
+                  <th scope="col">Answer</th>
+                  <th scope="col">Date Created</th>
+                  <th scope="col">Edit</th>
+                  <th scope="col">Delete</th>
+                </tr>
+              </thead>
+              <tbody class="dataAdded">
+                <!-- <tr class="records">
+                  <td>uyueuwyu87878</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                  <td class="">
+                    <i class="fas fa-trash"></i>
+                  </td>
+                  <td class="">
+                    <i class="far fa-edit"></i>
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+          <!--col2 -->
+          <!-- <div class="col-md-2">hello</div> -->
+        </div>
+      </div>
+    </section>
 
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
