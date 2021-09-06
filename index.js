@@ -145,6 +145,7 @@ editForm.addEventListener("submit", (e) => {
     });
 
   // query db by id
+  // https://stackoverflow.com/a/47876940
   db.collection("Q&A")
     .doc(id)
     .get()
