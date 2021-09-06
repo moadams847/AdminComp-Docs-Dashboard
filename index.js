@@ -43,17 +43,19 @@ const deleteQuestions = (id) => {
 };
 
 // retrieve data in real time
-db.collection("Q&A").onSnapshot((snapshot) => {
-  snapshot.docChanges().forEach((change, index) => {
-    const doc = change.doc;
-    // console.log(change);
-    if (change.type === "added") {
-      addQuestions(doc.data(), doc.id, index);
-    } else if (change.type === "removed") {
-      deleteQuestions(doc.id);
-    }
+db.collection("Q&A")
+  .orderBy("created_at", "desc")
+  .onSnapshot((snapshot) => {
+    snapshot.docChanges().forEach((change, index) => {
+      const doc = change.doc;
+      // console.log(change);
+      if (change.type === "added") {
+        addQuestions(doc.data(), doc.id, index);
+      } else if (change.type === "removed") {
+        deleteQuestions(doc.id);
+      }
+    });
   });
-});
 // =====================================================================
 // ---
 // add data to firestore
