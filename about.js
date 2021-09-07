@@ -10,9 +10,10 @@ const updateUi = (data, id, index) => {
   <div data-id="${id}" class="holdCardBtn">
   <div class="card bg-light">
   <div class="card-body">
-    <p class="card-text lead mb-3">
+    <p class="card-text lead mb-1">
      ${data.about}
     </p>
+    <small class="float-end time">create on: ${time}</small>
   </div>
 </div>
 <!--  -->
@@ -26,10 +27,15 @@ const updateUi = (data, id, index) => {
 
 // ---
 const editAbout = (data, id) => {
+  let timeFromDB = data.created_at.toDate();
+
   let aboutIntUI = document.querySelector(".holdCardBtn");
   if (aboutIntUI.getAttribute("data-id") === id) {
     const cardText = document.querySelector(".card-text");
+    const time = document.querySelector(".time");
     cardText.textContent = data.about;
+    timeFromDB = `create on: ${timeFromDB}`;
+    time.textContent = timeFromDB;
   }
 };
 
@@ -74,17 +80,21 @@ aboutForm.addEventListener("submit", (e) => {
     created_at: firebase.firestore.Timestamp.fromDate(now),
   };
 
-  // add update to db
-  db.collection("About")
-    .doc(id)
-    .update(about)
-    .then(() => {
-      console.log("question edited");
-    })
-    .catch((err) => {
-      console.log(err);
-    });
+  if (about.about) {
+    // console.log(about);
+
+    // add update to db
+    db.collection("About")
+      .doc(id)
+      .update(about)
+      .then(() => {
+        console.log("question edited");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    aboutForm.reset();
+  }
 
   //
-  aboutForm.reset();
 });
