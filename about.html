@@ -69,6 +69,59 @@
       </div>
     </nav>
 
+    <!--  -->
+
+    <section class="aboutInput mt-4">
+      <div class="container">
+        <div class="row justify-content-center align-content-center">
+          <div class="col-md-8">
+            <form class="aboutForm">
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >About</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  name="about"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary save">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  -->
+    <section class="aboutOutput mt-4">
+      <div class="container">
+        <div class="row justify-content-center align-content-center">
+          <!-- col-1 -->
+          <div class="col-md-8 cardContent">
+            <!-- <div class="card bg-light">
+              <div class="card-body">
+                <h5 class="card-title">About</h5>
+                <p class="card-text lead">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. In
+                  qui dolor facere expedita enim earum error consequuntur
+                  deserunt ipsum? Molestias.
+                </p>
+                <small class="float-end">6/8/2021</small>
+              </div>
+            </div> -->
+
+            <!--  -->
+            <!-- <div class="mt-3">
+              <button class="btn btn-primary edit">Edit</button>
+              <button class="btn btn-primary delete">Delete</button>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
     <script>
@@ -100,6 +153,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="index.js"></script>
+    <script src="about.js"></script>
   </body>
 </html>

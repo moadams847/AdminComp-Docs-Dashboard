@@ -18,7 +18,7 @@
 
     <title>Admin-Dashboard</title>
   </head>
-  <body>
+  <body class="position-relative">
     <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex">
       <div class="container">
         <a class="navbar-brand" href="dboard.html">Dashboard</a>
@@ -69,6 +69,69 @@
       </div>
     </nav>
 
+    <!-- col-1
+    <div class="col-md-3">
+      <div class="card">
+        <div class="card-body bg-light">
+          <h5 class="card-title">Java Files</h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Recusandae, voluptatum.
+          </p>
+          <a href="#" class="btn btn-primary">Upload Java Files</a>
+        </div>
+      </div>
+    </div>
+    col-2
+    <div class="col-md-3">
+      <div class="card bg-light">
+        <div class="card-body">
+          <h5 class="card-title">Video Guide</h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Recusandae, voluptatum.
+          </p>
+          <a href="#" class="btn btn-primary">Upload Video File</a>
+        </div>
+      </div>
+    </div>
+ -->
+
+    <!--  -->
+    <section class="p-5 mt-5">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <!-- col-3 -->
+          <div class="col-md-6">
+            <div class="card bg-light">
+              <div class="card-body">
+                <h5 class="card-title">Text Guide</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae, voluptatum.
+                </p>
+
+                <form class="textForm">
+                  <div class="input-group mb-3">
+                    <input
+                      type="file"
+                      class="form-control"
+                      id="inputGroupFile02"
+                      name="textPdf"
+                    />
+
+                    <button type="submit" class="btn btn-primary textBtn">
+                      Upload
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
@@ -86,7 +149,12 @@
       };
       firebase.initializeApp(config);
       const db = firebase.firestore();
+      // Get a reference to the storage service, which is used
+      // to create references in your storage bucket
       const storage = firebase.storage();
+
+      // Create a storage reference from our storage service
+      const storageRef = storage.ref();
     </script>
 
     <!-- bs -->
@@ -103,7 +171,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
     <script src="files.js"></script>
   </body>
 </html>
