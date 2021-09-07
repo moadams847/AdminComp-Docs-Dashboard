@@ -93,8 +93,8 @@ aboutForm.addEventListener("submit", (e) => {
       .catch((err) => {
         console.log(err);
       });
+
+    //
     aboutForm.reset();
   }
-
-  //
 });
