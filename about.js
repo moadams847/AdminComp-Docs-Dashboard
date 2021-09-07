@@ -34,7 +34,7 @@ const editAbout = (data, id) => {
     const cardText = document.querySelector(".card-text");
     const time = document.querySelector(".time");
     cardText.textContent = data.about;
-    timeFromDB = `create on: ${timeFromDB}`;
+    timeFromDB = `edited on: ${timeFromDB}`;
     time.textContent = timeFromDB;
   }
 };
