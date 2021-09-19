@@ -47,6 +47,11 @@ class Data {
     });
     return response;
   }
+
+  async querySingleRecord(id) {
+    const response = await this.typeOfData.doc(id).get();
+    return response;
+  }
 }
 
 // const data = new Data("FAQ");

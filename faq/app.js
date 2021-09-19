@@ -62,8 +62,12 @@ EditForm.addEventListener("submit", (e) => {
 
   data
     .editData(id, question, answer, author)
-    .then(() => {
+    .then((id) => {
       console.log("data edited");
+      return data.querySingleRecord(id);
+    })
+    .then((id) => {
+      console.log(id);
     })
     .catch((e) => {
       console.log(e);
