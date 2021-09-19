@@ -49,16 +49,13 @@ class DataUi {
 
   updateDom(data, id) {
     if (id) {
-      const author = document.querySelector(".author");
-      const question = document.querySelector(".question");
-      const answer = document.querySelector(".answer");
-
       const dataTable = Array.from(this.table.children);
       dataTable.forEach((item) => {
         if (item.getAttribute("data-id") === id) {
-          author.textContent = data.author;
-          question.textContent = data.question;
-          answer.textContent = data.answer;
+          console.log(item);
+          item.children[1].textContent = data.author;
+          item.children[3].textContent = data.question;
+          item.children[4].textContent = data.answer;
         }
       });
     }

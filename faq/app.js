@@ -2,6 +2,7 @@
 const tableOutPut = document.querySelector(".tableOutPut");
 const addForm = document.querySelector(".addForm");
 const EditForm = document.querySelector(".EditForm");
+
 // dom events-----------------------------------------------------------------
 // add data
 addForm.addEventListener("submit", (e) => {
@@ -60,19 +61,17 @@ EditForm.addEventListener("submit", (e) => {
   const answer = EditForm.answer.value;
   const id = EditForm.dataId.value;
 
-  // data
-  //   .editData(id, question, answer, author)
-  //   .then(() => {
-  //     console.log("data edited");
-  //   })
-  //   .catch((e) => {
-  //     console.log(e);
-  //   });
-
   data
     .editData(id, question, answer, author)
-    .then((response) => {
-      console.log(response);
+    .then(() => {
+      console.log("data edited");
+      const idFromForm = EditForm.dataId.value;
+      return data.getSingleRecord(idFromForm);
+    })
+    .then((data) => {
+      // console.log(data.data(), data.id);
+      dataUi.updateDom(data.data(), data.id);
+      console.log("Ui updated");
     })
     .catch((e) => {
       console.log(e);

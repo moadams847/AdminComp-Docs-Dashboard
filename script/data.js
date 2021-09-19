@@ -53,11 +53,3 @@ class Data {
     return response;
   }
 }
-
-// db.collection("Q&A")
-// .doc(id)
-// .get()
-// .then((snapshot) => {
-//   // console.log(snapshot.data());
-//   editQuestion(snapshot.data(), id);
-// });
