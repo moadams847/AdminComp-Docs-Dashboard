@@ -60,14 +60,19 @@ EditForm.addEventListener("submit", (e) => {
   const answer = EditForm.answer.value;
   const id = EditForm.dataId.value;
 
+  // data
+  //   .editData(id, question, answer, author)
+  //   .then(() => {
+  //     console.log("data edited");
+  //   })
+  //   .catch((e) => {
+  //     console.log(e);
+  //   });
+
   data
     .editData(id, question, answer, author)
-    .then((id) => {
-      console.log("data edited");
-      return data.querySingleRecord(id);
-    })
-    .then((data) => {
-      console.log(data.doc.data());
+    .then((response) => {
+      console.log(response);
     })
     .catch((e) => {
       console.log(e);

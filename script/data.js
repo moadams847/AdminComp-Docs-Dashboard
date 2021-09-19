@@ -48,13 +48,16 @@ class Data {
     return response;
   }
 
-  async querySingleRecord(id) {
+  async getSingleRecord(id) {
     const response = await this.typeOfData.doc(id).get();
     return response;
   }
 }
 
-// const data = new Data("FAQ");
-// data.getData((data, id) => {
-//   console.log(data, id);
+// db.collection("Q&A")
+// .doc(id)
+// .get()
+// .then((snapshot) => {
+//   // console.log(snapshot.data());
+//   editQuestion(snapshot.data(), id);
 // });
