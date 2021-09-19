@@ -207,6 +207,26 @@
       </div>
     </div>
 
+    <!-- resolves data fns propblem -->
+    <!-- https://github.com/andrewcourtice/vuetiful/issues/30 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.27.1/date_fns.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBj7QuJFPL67nlo3dGVNgn-LOSdWGbssoQ",
+        authDomain: "admincomp-docs.firebaseapp.com",
+        projectId: "admincomp-docs",
+        storageBucket: "admincomp-docs.appspot.com",
+        messagingSenderId: "326316471939",
+        appId: "1:326316471939:web:c8b95133b2631ea12a8db6",
+        measurementId: "G-XLE2609ME3",
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+    </script>
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
