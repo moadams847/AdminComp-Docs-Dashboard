@@ -19,7 +19,6 @@ class Data {
   }
 
   async addData(question, answer, author) {
-    // format a chat object
     const now = new Date();
     const data = {
       question,
@@ -43,6 +42,15 @@ class Data {
       question,
       answer,
       author,
+      created_at: firebase.firestore.Timestamp.fromDate(now),
+    });
+    return response;
+  }
+
+  async editDataAbout(about, id) {
+    const now = new Date();
+    const response = await this.typeOfData.doc(id).update({
+      about,
       created_at: firebase.firestore.Timestamp.fromDate(now),
     });
     return response;

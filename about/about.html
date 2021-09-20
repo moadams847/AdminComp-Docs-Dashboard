@@ -72,14 +72,22 @@
       <div class="container position-relative">
         <div class="row justify-content-center align-content-center">
           <div class="col-md-8">
-            <form class="aboutForm">
+            <form class="aboutForm d-none">
               <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label"
                   >Save About</label
                 >
-                <textarea class="form-control" id="about" rows="4"></textarea>
+                <textarea class="form-control" id="about" rows="5"></textarea>
               </div>
-              <button class="btn btn-primary">Save</button>
+              <div class="mb-3 d-none">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="idFromData"
+                  placeholder=""
+                />
+              </div>
+              <button class="btn btn-primary">Update About</button>
             </form>
           </div>
         </div>
@@ -104,9 +112,7 @@
           <div class="col-md-12">
             <form class="logginForm">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Email address</label
-                >
+                <label for="" class="form-label">Email address</label>
                 <input
                   type="email"
                   class="form-control"
@@ -115,9 +121,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Password</label
-                >
+                <label for="" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" />
               </div>
               <button type="submit" class="btn btn-primary">login</button>
@@ -130,8 +134,8 @@
 
     <section id="appZindex" class="loggedIn mt-5 position-relative">
       <div class="container">
-        <div class="row justify-content-center align-content-center">
-          <div class="col-md-8">
+        <div class="row renderData justify-content-center align-content-center">
+          <!-- <div class="col-md-8">
             <div class="card bg-light">
               <div class="card-body">
                 <p class="card-text">
@@ -143,9 +147,9 @@
                 <div class="float-end mt-2"><small>18/8/2021</small></div>
               </div>
             </div>
-            <button class="btn btn-primary mt-3">Edit</button>
+            <button class="btn cardBtn btn-primary mt-3">Edit</button>
           </div>
-        </div>
+        --></div>
       </div>
     </section>
 
@@ -173,9 +177,7 @@
           <div class="modal-body">
             <form class="AddUserForm">
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label"
-                  >Email address</label
-                >
+                <label for="" class="form-label">Email address</label>
                 <input
                   type="email"
                   class="form-control"
@@ -184,9 +186,7 @@
                 />
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Password</label
-                >
+                <label for="" class="form-label">Password</label>
                 <input type="password" class="form-control" id="password" />
               </div>
               <button type="submit" class="btn btn-primary">
