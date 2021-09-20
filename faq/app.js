@@ -53,7 +53,7 @@ tableOutPut.addEventListener("click", (e) => {
   }
 });
 
-// edit data submit event
+// edit data and submit event
 EditForm.addEventListener("submit", (e) => {
   e.preventDefault();
   const author = EditForm.author.value;
