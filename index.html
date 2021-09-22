@@ -27,7 +27,7 @@
     <section class="">
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-          <a class="navbar-brand" href="#">Dashboard</a>
+          <a class="navbar-brand fs-3" href="#">Dashboard</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -41,23 +41,31 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-              <li class="nav-item loggedIn">
+              <li class="nav-item loggedIn d-none">
                 <a class="nav-link" aria-current="page" href="index.html"
                   >Edit FAQ</a
                 >
               </li>
-              <li class="nav-item loggedIn">
+              <li class="nav-item loggedIn d-none">
                 <a class="nav-link" href="about.html">Edit About</a>
               </li>
             </ul>
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item loggedOut">
-                <a class="nav-link" href="">Login</a>
+              <li class="nav-item loggedIn d-none">
+                <!-- Button trigger modal -->
+
+                <a
+                  class="nav-link"
+                  href=""
+                  data-bs-toggle="modal"
+                  data-bs-target="#accountModal"
+                  >Account</a
+                >
               </li>
-              <li class="nav-item loggedIn">
-                <a class="nav-link" href="">Logout</a>
+              <li class="nav-item loggedIn d-none">
+                <a id="logout" class="nav-link" href="">Logout</a>
               </li>
-              <li class="nav-item loggedIn">
+              <li class="nav-item loggedIn d-none">
                 <a
                   data-bs-target="#AddUserModal"
                   data-bs-toggle="modal"
@@ -74,10 +82,10 @@
 
     <!-- input form---------------------------------------------------- -->
 
-    <section class="loggedIn mt-3">
-      <div class="container-fluid position-relative">
+    <section class="loggedIn d-none mt-3">
+      <div class="container-fluid">
         <div class="row justify-content-center align-content-center">
-          <div class="col-md-8">
+          <div class="col-md-10">
             <form class="addForm">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
@@ -102,9 +110,7 @@
                 ></textarea>
               </div>
               <div class="mb-3">
-                <label for="" class="form-label"
-                  >Author</label
-                >
+                <label for="" class="form-label">Author</label>
                 <input
                   type="text"
                   class="form-control"
@@ -119,12 +125,17 @@
             </form>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- login form------------------------------------------------ -->
+    <!-- login form------------------------------------------------ -->
+    <section class="loggedOut d-none">
+      <div class="container">
         <div
+          style="width: 500px"
           class="
+            shadow-sm
             row
-            loggedOut
             bg-light
             justify-content-center
             align-content-center
@@ -134,29 +145,32 @@
             start-50
             translate-middle
             mt-5
-            d-none
           "
         >
           <div class="col-md-12">
+            <p class="mb-3 fw-bold">Login to Dashboard</p>
             <form class="logginForm">
               <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label"
-                  >Email address</label
+                  >Email address:</label
                 >
                 <input
                   type="email"
                   class="form-control"
-                  id="email"
+                  id="loginEmail"
                   placeholder="name@example.com"
                 />
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Password</label
-                >
-                <input type="password" class="form-control" id="password" />
+                <label for="" class="form-label">Password:</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="loginPassword"
+                />
               </div>
-              <button type="submit" class="btn btn-primary">login</button>
+              <button type="submit" class="btn btn-primary mb-3">login</button>
+              <p class="error text-center text-danger"></p>
             </form>
           </div>
         </div>
@@ -166,7 +180,7 @@
 
     <!-- output table ---------------------------------------------------- -->
 
-    <section class="loggedIn mt-5">
+    <section class="loggedIn d-none mt-5">
       <div class="container-fluid">
         <div class="row justify-content-center align-content-center">
           <div class="col-md-12">
@@ -245,20 +259,11 @@
                 <textarea class="form-control" id="answer" rows="4"></textarea>
               </div>
               <div class="mb-3">
-                <label for=" class="form-label"
-                  >Author</label
-                >
-                <input
-                  type="text"
-                  class="form-control"
-                  id="author"
-                  placeholder=""
-                />
+                <label class="form-label">Author</label>
+                <input type="text" class="form-control" id="author" />
               </div>
               <div class="mb-3 d-none">
-                <label for="" class="form-label"
-                  >ID</label
-                >
+                <label for="" class="form-label">ID</label>
                 <input
                   type="text"
                   class="form-control"
@@ -312,20 +317,60 @@
                 <input
                   type="email"
                   class="form-control"
-                  id="email"
+                  id="singnUpemail"
                   placeholder="name@example.com"
                 />
               </div>
               <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label"
-                  >Password</label
-                >
-                <input type="password" class="form-control" id="password" />
+                <label for="" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="singnUppassword"
+                />
               </div>
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" class="btn btn-primary mb-3">
                 Add New User
               </button>
+              <p class="error text-center text-danger"></p>
             </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- account modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="accountModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">User Info</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div id="modalAc" class="modal-body">
+            <!-- <p class="lead">Logged in as Adams</p> -->
           </div>
           <div class="modal-footer">
             <button
@@ -344,6 +389,7 @@
     <!-- https://github.com/andrewcourtice/vuetiful/issues/30 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.27.1/date_fns.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
     <script>
       // Initialize Firebase
@@ -358,6 +404,7 @@
       };
       firebase.initializeApp(config);
       const db = firebase.firestore();
+      const auth = firebase.auth();
     </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
