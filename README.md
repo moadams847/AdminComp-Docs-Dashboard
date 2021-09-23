@@ -2,7 +2,7 @@
 
 ## Motivation
 
-This project for admins of [AdminComp Docs Site](https://zen-ptolemy-6bcc40.netlify.app/). This is to enable them edit parts of the site without touching a single line of code.
+This project for admins of [AdminComp Docs Site](https://zen-ptolemy-6bcc40.netlify.app/). This is to enable them edit parts of the site in real time without touching a single line of code.
 
 ## Screenshot
 
