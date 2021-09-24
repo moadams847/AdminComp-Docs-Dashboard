@@ -6,7 +6,7 @@ This project is for admins of [AdminComp Docs Site](https://zen-ptolemy-6bcc40.n
 
 ## Screenshot
 
-[![AdminComp Docs Dashboard](img/board.PNG "AdminComp Docs Dashboard")]()
+[![AdminComp Docs Dashboard](img/db.PNG "AdminComp Docs Dashboard")]()
 
 ## URL
 
