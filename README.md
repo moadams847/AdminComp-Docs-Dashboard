@@ -14,8 +14,8 @@ This project is for admins of [AdminComp Docs Site](https://zen-ptolemy-6bcc40.n
 
 ## Test Login
 
-email: test123@gmail.com
-password: test123
+- email: test123@gmail.com
+- password: test123
 
 ## Installation
 
