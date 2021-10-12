@@ -1,4 +1,4 @@
-# AdminComp Docs Dashboard
+# AdminComp Docs Dashboard (Test)
 
 ## Motivation
 
@@ -11,6 +11,11 @@ This project is for admins of [AdminComp Docs Site](https://zen-ptolemy-6bcc40.n
 ## URL
 
 [AdminComp Docs Dashboard](https://goofy-turing-ea6310.netlify.app/)
+
+## Test Login
+
+email: test123@gmail.com
+password: test123
 
 ## Installation
 
